@@ -1,0 +1,104 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>kb-bek</title>
+    <meta name="author" content="Did Coding Limited & James Granger Design">
+    <link rel="canonical" href=""/>
+    <link rel="home" href=""/>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'portfolio/images/mainlogo.png' %}">
+    <link rel="apple-touch-icon" type="image/jpg" href="{% static 'portfolio/images/mainlogo.png' %}">
+
+    <!-- ================================
+    Start CSS
+    ================================= -->
+    <link href="{% static 'portfolio/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.css">
+    <link href="{% static 'portfolio/css/style.css' %}" rel="stylesheet">
+    <!-- ================================
+    End CSS
+    ================================= -->
+
+  </head>
+  <body>
+
+    <!-- ================================
+    Start Navigation Bar
+    ================================= -->
+    <header>
+      <div class="headerCol">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <div class="logoCol"><a href="{% url 'home' %}"><img src="{% static 'portfolio/images/mainlogo.png'%}  " width="85" height="60" alt="..."></a></div>
+            </div>
+            <div class="col">
+              <div class="d-md-none">
+                <button class="navToggle">
+                  <span class="navToggle__text">Toggle Menu</span>
+                </button>
+              </div>
+              <div class="navCollapseCol">
+                <div class="navCol">
+                  <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                    <li><a href="{% url 'blog:all_blogs' %}">Blog</a></li>
+                    <li><a href="https://github.com/kb-bek">GitHub</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ================================
+    End Navigation Bar
+    ================================= -->
+      {% block content %}
+      {% endblock content %}
+    <!-- ================================
+    Start Content
+    ================================= -->
+
+    <footer>
+      <div class="footerCol">
+        <div class="container">
+          <ul class="socialCol">
+
+            <li><a href="https://www.instagram.com/kubageek/"><img src="{% static 'portfolio/images/instagram.png' %}" alt="..."></a></li>
+            <li><a href="https://t.me/kbnchbek"><img src="{% static 'portfolio/images/telegram.png' %}" alt="..."></a></li>
+            <li><a href="https://www.linkedin.com/in/kubanychbek-talipov-398a60243/"><img src="{% static 'portfolio/images/linkedin.png' %}" alt="..."></a></li>
+            <li><a href="https://github.com/kb-bek"><img src="{% static 'portfolio/images/github.png' %}" alt="..."></a></li>
+          </ul>
+          <div class="copyrightCol">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ================================
+    End Footer
+    ================================= -->
+
+    <!-- ================================
+    Start Scripts
+    ================================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'portfolio/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.js"></script>
+    <script src="{% static 'portfolio/js/script.js' %}"></script>
+    <!-- ================================
+    End Scripts
+    ================================= -->
+  </body>
+</html>

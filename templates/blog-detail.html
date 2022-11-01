@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    <section>
+      <div class="innerPageBannerCol">
+        <div class="container">
+          <div class="row g-4 g-md-3  align-items-center">
+            <div class="col-md-6">
+              <div class="bannerContent">
+                <h6 class="xlTitle pb-md-3">{{ blog.title }}</h6>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md">
+              <h4 class="smTitle pb-3">{{ blog.date|date:'F jS Y' }}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionSpaceSm">
+        <div class="container">
+          <p>
+            {{ blog.description|safe }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+{% endblock %}
